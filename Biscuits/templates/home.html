@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+<style type="text/css">
+.rectangle{
+		position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        height: 500px;
+        width: 100%;
+		background-color: #ffffff;
+		
+		border-radius: 8px;
+	}
+@keyframes example {
+  40%   {background-color: violet;}
+  50%  {background-color: indigo;}
+  60%  {background-color: blue;}
+  70%  {background-color: green;}
+  80%  {background-color: yellow;}
+  90%  {background-color: orange;}
+  100% {background-color: red;}
+}
+</style>
+{% endblock %}
+{% block content %}
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://raw.githubusercontent.com/Vinayaka-robotics/Biscuits/master/files/Cookie.ico" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    Biscuit
+  </a>
+</nav>
+<div style="max-width: 8005px;
+  height: 800px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;">
+  <div class="w3-col m4 l3">	
+  	<div class="w3-colxs">
+  <div class="rectangle" style="max-width: 901px;">
+  	<div style="padding-top: 100px;"></div>
+  	<div>
+      <center>
+        		<font style="font-family: 'Segoe UI'; font-size: 19px;">
+  			<h4 style="font-family: 'Segoe UI';">Online Attendance Helper</h4><br>
+        Hit this below button to upload your base name file.<br><br>
+        <form> <input type="submit" value="Upload base file" class="btn btn-outline-dark"></form>
+  		</font>
+    </center>
+  	</div>
+  </div>
+  </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Orange</title>
+{% endblock %}
+{% block content %}
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://github.com/Vinayaka-robotics/MRPL_WEB/blob/master/mandarin.png?raw=true" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    Orange
+  </a>
+  <form action="/pip">
+  	<input class="btn btn-outline-danger" type="submit" placeholder="Pip">
+  </form>
+   <form action="/peel">
+  	<input class="btn btn-outline-danger" type="submit" placeholder="peel">
+  </form>
+</nav>
+{% endblock %}

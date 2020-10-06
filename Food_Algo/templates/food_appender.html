@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block head %}
+<style type="text/css">
+	.rectangle{
+		position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        height: 500px;
+        width: 900px;
+		background-color: #ffffff;
+		
+		border-radius: 8px;
+	}
+</style>
+{% endblock %}
+{% block content %}
+<div>
+
+<div class="rectangle">
+	<div>
+		<form><div style="padding-left:5px;">
+			<div style="height: 350px;
+			width: 800px;
+			overflow-y: auto;">
+			<div class="thead-dark">
+				<table class="table" id = "myTable">
+    <tr>
+      <td> <b> Date </b> </td>
+      <td> <b> Time </b> </td>
+      <td> <b> Food </b> </td>
+    </tr>
+</table>
+</div>	
+</div>
+</div>
+<div style="padding-left: 10px;">
+<div style="padding-top: 100px;"></div>
+<div class="input-group">
+  <div style="width: 300px;">
+  <input type="Date" aria-label="First name" id ="date" class="form-control"> 
+</div>
+<div style="padding-left: 50px;"></div>
+  <select name="Food_time" id="foodtime">
+
+  <option value="Breakfast">Breakfast</option>
+  <option value="lunch">Lunch</option>
+  <option value="Dinner">Dinner</option>
+  
+</select>
+<div style="padding-left: 50px;"></div>
+<div style="width: 200px;">
+  <input type="text" aria-label="Last name" id ="food" class="form-control">
+  </div>
+  <div style="padding-left: 50px;"></div>
+  <input type="submit" onclick="return fillTable();" class="btn btn-outline-dark" />
+</div>
+ 
+    
+    
+
+			
+			
+		</form>
+	</div>
+	</div>
+</div>	
+</div>
+<script type="text/javascript">
+	function fillTable() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  cell1.innerHTML = document.getElementById("date").value;
+  cell2.innerHTML = document.getElementById("foodtime").value;
+  cell3.innerHTML = document.getElementById("food").value;
+  return false;
+}
+</script>
+{% endblock %}

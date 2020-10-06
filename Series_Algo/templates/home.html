@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}
+<style type="text/css">
+	.rectangle{
+		height: 400px;
+		width: 600px;
+		background-color: #e6e6e6;
+		margin: auto;
+		border-radius: 6px;
+		box-shadow: 1px 1px 4px 1px #4d4d4d;
+	}
+	input[type='text']{
+		margin: auto;
+		border-width: 0px;
+		
+		color: #e6e6e6;
+		border-radius: 4px;
+		height: 40px;	
+	}
+</style>
+{% endblock %}
+{% block content %}
+<div style="padding-top: 120px;"></div>
+<div class='rectangle'>
+	<div style="padding-top: 170px;"></div>
+	<div style="padding-left: 100px;">
+		<form action="/calculator" method="POST">
+	<div class="input-group mb-3" style="width: 400px">
+  <input type="text" class="form-control" placeholder="Enter Series" aria-label="series" aria-describedby="button-addon2" style="color: #999999">
+  <div class="input-group-append">
+  	
+    <input class="btn btn-outline-secondary" type="submit" text='Process'></form> 
+  </div>
+</div>
+	</div>
+	</form>
+</div>
+</div>
+
+<script>
+function myFunction() {
+  location.replace("https://www.w3schools.com")
+}
+</script>
+
+{% endblock %}

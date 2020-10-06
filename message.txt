@@ -1,0 +1,96 @@
+
+{% extends "base.html" %}
+{% block head %}
+<style type="text/css">
+  
+	form {text-align: center;
+		position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }	
+  h4{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #00cc66;
+        font-family: 'consolas';
+    }
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+    .rectangle {
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 400px;
+        width: 800px;
+        background-color: #404040;
+        text-align: center;
+        border-radius: 6px;
+    }
+
+    .Author {
+      position: absolute;
+        left: 50%;
+        top: 97%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<center>
+  <div class="rectangle"></div>
+     	 <form>
+     	 	<div style="overflow-y:auto;
+   height:200px;
+   display:block;">
+     	 	
+<table class="table" id = "myTable">
+    <tr>
+      <td> <b><p style="color: #00cc66; font-family: 'consolas'"> Date </p></b> </td>
+      <td> <b><p style="color: #00cc66; font-family: 'consolas'">  Time </p></b> </td>
+      <td> <b><p style="color: #00cc66; font-family: 'consolas'">  Food </p></b> </td>
+    </tr>
+</table>
+
+</div>
+<form action="">
+    <input type="date" id ="date" />
+    <select name="food_times" id="food_times" style= "width: 120px">
+  <option value="Breakfast">Breakfast</option>
+  <option value="Lunch">Lunch</option>
+  <option value="Dinner">Dinner</option>
+  
+</select>
+    <input type="text" id ="foodi" />
+    <input type="submit" onclick="return fillTable();" value='Add' />
+</form>
+<script type="text/javascript">
+  
+function fillTable() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  cell1.innerHTML = document.getElementById("date").value.fontcolor("#00cc66");
+  cell2.innerHTML = document.getElementById("food_times").value.fontcolor("#00cc66");
+  cell3.innerHTML = document.getElementById("foodi").value.fontcolor("#00cc66");
+  return false;
+}
+</script>
+</center>
+{% endblock %}
+{% block change %}
+<li class="nav-item">
+        <a class="nav-link" href='/date'style="color: #00cc66""font-family:'consolas'">Solver</a>
+ </li>
+{% endblock %}
